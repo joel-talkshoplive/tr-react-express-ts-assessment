@@ -1,81 +1,48 @@
-# Turborepo starter
+# Welcome!
 
-This is an official starter Turborepo.
+Welcome to Talk Shop Live full-stack assessment challenge!
+Please fork the repo to start.
 
-## Using this example
+This challenge requires:
 
-Run the following command:
+- NodeJS (>= v16.14.0 preferably v18.12.1)
+- NPM
+- A cup of ☕ or 🍵
 
-```sh
-npx create-turbo@latest
-```
+The repo is pre-configured, so just running `npm install` you should be able to start.
+You may use any other package of your choice to enrich your development experience.
 
-## What's inside?
+### Project Structure
 
-This Turborepo includes the following packages/apps:
+You will find a ReactJS app in the `/apps/frontend` folder and an ExpressJS app in the `/apps/backend` folder.
 
-### Apps and Packages
+To start just run the following commands on the root directory:
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+1. Install the dependencies: `npm install`
+1. Start both frontend and backend apps: `npm run dev`
+1. The backend app should be running on [http://localhost:3000](http://localhost:3000) and the frontend app on [http://localhost:5173](http://localhost:5173)
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### The Challenge
 
-### Utilities
+This is a typical Todo app build with ReactJS and ExpressJS in which you should be able to create, read, update, and delete todos, there are already some boilerplate code like styles, components, and setup code for the backend.
 
-This Turborepo has some additional tools already setup for you:
+For this full-stack code challenge you will need to develop the following features using Typescript:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+Backend:
 
-### Build
+- CRUD functionality, follow REST standard, there is no need for a DB, use the `todos` variable instead
+- For Create, Update, and Delete, the request must have the correct `Api-Key` header (use the constant `API_KEY`), if not return the correct HTTP status
 
-To build all apps and packages, run the following command:
+Frontend:
 
-```
-cd my-turborepo
-pnpm build
-```
+- Render the todo list
+- Create todo, after one todo is added make sure to reset the input
+- Toggle todo status and update the app state
+- Delete todo and update the app state
 
-### Develop
+Extra points:
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- Add request validation
+- Filter todos by status
+- Ability to search for todos
+- Ability to export todos to a CSV file
