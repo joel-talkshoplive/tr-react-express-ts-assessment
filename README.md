@@ -10,7 +10,12 @@ This challenge requires:
 - A cup of ☕ or 🍵
 
 The repo is pre-configured, so just running `npm install` you should be able to start.
-You may use any other package of your choice to enrich your development experience.
+
+### Submission Guidelines
+
+You may use any other package of your choice to enrich your development experience, but what's already installed is mandatory to use.
+
+Once finished, issue a pull request to our repo's so we can review your solution, please notify us when your pull request is ready to be reviewed.
 
 ### Project Structure
 
